@@ -1,19 +1,15 @@
-import React from "react";
-
+import React, { Fragment } from "react";
+import { Switch, Route } from "react-router-dom";
+import Home from "./home";
+import Layout from "../components/Layout";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Layout />
+      <Switch>
+        <Route path="/" exact component={Home}></Route>
+      </Switch>
+    </Fragment>
   );
 }
 
